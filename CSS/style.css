@@ -1,0 +1,275 @@
+*{
+    margin : 0 ; 
+    padding : 0 ; 
+    box-sizing: border-box;
+}
+ html { 
+    scroll-behavior: smooth;
+}
+
+ body{
+     font-family: "Roboto", sans-serif;
+    }
+    
+    a{
+        all : unset ;
+        
+    }
+    ul li {
+        list-style: none;
+    }
+    ::-webkit-scrollbar{
+        width: 15px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: black;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #9b2383;
+        border-radius: 15px;
+    }
+    
+    /* ======================================= */
+    
+    /* =========== Header section ============ */
+    
+    /* ======================================= */
+header{
+    padding : 25px 12% ; 
+    background-color: #252525;
+    color : #fff ;
+    width:100% ;
+    display : flex ; 
+    justify-content: space-between;
+    align-items: center;
+}
+ header .logo{
+    font-size: 35px;
+    font-weight: 700;
+ }
+
+ nav.navbar ul {
+    display : flex; 
+    gap: 30px;
+    font-size: 18px;
+ }
+
+ nav.navbar ul li {
+    cursor: pointer;
+    
+ }
+ nav.navbar ul li a{
+    transition: .5s;
+    padding : 10px ;
+    border-radius: 15px;
+    border-bottom: 1px solid transparent;
+ }
+ nav.navbar ul li a:hover{
+    /* background-color : #AF47D2 ; */
+    border-bottom: 3px solid #9b2383;
+ }
+    /* ======================================= */
+    /* ============= Home section ============ */
+    /* ======================================= */
+
+ home {
+    padding: 192px 12% ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ home .content {
+    width : 60% ;
+    font-size: 24px ; 
+ }
+ span { 
+    font-size: 60px ;
+    color : #9b2383 ; 
+ }
+.content p{
+    margin : 20px 0 30px ;
+    opacity: 50%;
+}
+ button { 
+    background-color: #9b2383;
+    width: 175px;
+    padding:15px ;
+    color : white ; 
+    font-size: 20px;
+    border-radius: 15px;
+    cursor:pointer ;
+    border-color: transparent;
+    transition: .3s;
+    animation : move-btn 1s infinite 3s; 
+}
+button:hover{
+    opacity: 80%;
+}
+/* Animation for mioving button */
+@keyframes move-btn {
+    0%{
+        scale: 1 ;
+    }
+    50%{
+        scale: 1.04 ;
+    }
+    100%{
+        scale:1 ;
+    }
+}
+home img{
+    border-radius: 25px ;
+    filter: drop-shadow(0 0 15px #000000);
+}
+
+    /* ======================================= */
+    /* ============= About section ============ */
+    /* ======================================= */
+about {
+    background-color: black;
+    padding: 192px 12% ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ about .content {
+    width : 60% ;
+    font-size: 24px ; 
+    color: white ;
+ }
+ about img{
+    border-radius: 25px ;
+    filter: drop-shadow(0 0 15px #ffffff);
+}
+    /* ======================================= */
+    /* ========== projects section =========== */
+    /* ======================================= */
+    project {
+        background-color: #EEEDEB;
+        padding: 140px 12% ;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+     }
+
+     project .heading-title{
+        position: absolute;
+        top :20px ;
+        font-size: 60px;
+        color:black;
+        text-shadow: 3px 3px 3px gray ;
+     }
+     project .cards{
+        display: flex;
+        gap: 50px ;
+     }
+     .cards .card{
+        background-color: rgba(86, 85, 87, 0.573) ;
+        border-radius: 15px;
+        position: relative;
+        transition: .3s;
+    }
+    .cards .card img{
+        width: 100% ;
+        border-radius: 15px 15px 0 0 ;
+        padding:10px ;
+     }
+     .cards .card h3{
+        margin: 5px 20px px ;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+     }
+     .cards .card p{
+        font-size: 18px;
+        padding: 25px ;
+        color: white;
+    }
+    .card .github{
+        font-size: 40px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    
+    }
+    .card .livedemo{
+        position: absolute;
+        right:30px;
+        bottom: 37px;
+        font-size: 24px;
+        color:  #9b2383 ;
+    }
+    .livedemo , i{
+        cursor: pointer;
+    }
+    .livedemo:hover , i:hover{
+        opacity: 50% ;
+    }
+    .cards .card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 30px 35px black;
+    }
+    .cards .card:hover h3{
+        color : #9b2383;
+    }
+    /* ======================================= */
+    /* ========== contact section =========== */
+    /* ======================================= */
+    .contact{
+        text-align: center;
+        background-color: black;
+        font-size: 20px;
+        padding: 67px;
+    }
+    .contact .heading-title{
+        color:gray ;
+        font-size: 60px;
+        margin-bottom: 100px;
+        position: relative;
+        top: 40px;
+    }
+    .contact form{
+        display: flex;
+        flex-direction: column;
+        max-width: 50em;
+        margin: 1rem auto 0 ;
+    }
+    .contact form .input-box input ,
+    .contact form textarea{
+        width: 80%;
+        color: black;
+        padding: 20px;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    .contact form .send-btn{
+        margin-bottom: 50px;
+    }
+    .contact form .send-btn input{
+        width: 200px;
+        outline: none;
+        border: none;
+        background-color: #9b2383;
+        padding: 20px;
+        color: white;
+        border-radius: 15px;
+        font-size: 18px;
+        opacity: 1;
+        transition: .3s;
+        cursor: pointer;
+    }
+    .contact form .send-btn input:hover{
+        opacity: .5;
+    }
+    /* ======================================= */
+    /* ========== footer section =========== */
+    /* ======================================= */
+    footer.footer{
+        background-color: #252525;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
